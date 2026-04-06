@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cursor-bg: #f7f7f4;
+  --color-cursor-dark: #14120b;
+  --color-cursor-text: #26251e;
+  --color-cursor-text-muted: rgba(38, 37, 30, 0.55);
+  --color-cursor-border: rgba(38, 37, 30, 0.08);
+  --color-cursor-border-strong: rgba(38, 37, 30, 0.4);
+  --color-cursor-accent: rgba(38, 37, 30, 0.06);
+  --color-cursor-card: #efefec;
+  --font-family-figtree: 'Figtree', sans-serif;
+  --font-family-manrope: 'Manrope', sans-serif;
+  --font-family-inter: 'Inter', sans-serif;
+}
+
+html {
+  font-family: 'Figtree', serif;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  line-height: inherit;
+  background: #f7f7f4;
+  color: #26251e;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}

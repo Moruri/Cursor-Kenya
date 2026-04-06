@@ -1,0 +1,59 @@
+<section class="w-full mx-auto py-10">
+  <div class="container max-w-screen-sm md:max-w-screen-xl mx-auto px-4 mt-2 md:mt-20">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-20">
+      <!-- Left: Title -->
+      <div class="relative md:col-span-7">
+        <h1 class="text-center md:text-left text-4xl md:text-7xl font-bold w-full md:w-full flex flex-col md:leading-loose leading-tight text-cursor-text">
+          <span class="flex flex-col-reverse items-center md:flex-row md:items-center w-full">
+            <span class="block">Code With</span>
+            <app-spinning-badge />
+          </span>
+          <span class="text-cursor-text-muted">The Cursor Way</span>
+          <span> 2026 </span>
+        </h1>
+      </div>
+
+      <!-- Right: Countdown + Info -->
+      <div class="md:col-span-5 space-y-6 mx-auto w-full my-auto">
+        <app-countdown-timer />
+
+        <!-- Event Info Card -->
+        <div class="rounded-lg h-fit p-2 bg-cursor-text">
+          <div class="flex divide-x-2 divide-dotted border-2 rounded-lg items-center border-dotted border-cursor-bg divide-cursor-bg text-cursor-bg">
+            <div class="w-3/4 font-bold p-2 space-y-2">
+              <h2 class="text-3xl md:text-4xl">Cursor Kenya</h2>
+              <p class="text-sm">Nairobi, Kenya</p>
+            </div>
+            <div class="flex flex-1 flex-col space-y-1 font-bold p-2 items-center">
+              @for (i of ticketLines; track i) {
+                <div class="w-1/2 h-0.5 bg-cursor-bg opacity-70"></div>
+              }
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="cta-buttons flex flex-wrap justify-center md:justify-start gap-4">
+          <a href="https://luma.com/gwn67ctd" target="_blank" rel="noopener" class="cursor-pointer px-8 py-2 bg-cursor-text text-cursor-bg rounded-full flex items-center text-center md:text-left h-fit w-fit hover:opacity-90 transition-opacity no-underline">
+            Submit Talk
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mx-2">
+              <path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            </svg>
+          </a>
+          <a href="https://luma.com/gwn67ctd" target="_blank" rel="noopener" class="cursor-pointer px-8 py-2 bg-cursor-text text-cursor-bg rounded-full flex items-center text-center md:text-left h-fit w-fit hover:opacity-90 transition-opacity no-underline">
+            Get Tickets
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mx-2">
+              <path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            </svg>
+          </a>
+          <a href="https://photos.app.goo.gl/FAPNogQYumKTXmdS6" target="_blank" rel="noopener" class="cursor-pointer px-8 py-2 bg-cursor-text text-cursor-bg rounded-full flex items-center text-center md:text-left h-fit w-fit hover:opacity-90 transition-opacity no-underline">
+            Cursor Kenya 2026 Photos
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mx-2">
+              <path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

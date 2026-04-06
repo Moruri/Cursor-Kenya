@@ -1,0 +1,39 @@
+<div class="flex flex-wrap justify-center md:justify-start w-full gap-y-4 gap-x-1.5 count-down-main md:order-2 order-1">
+  <!-- Days -->
+  <div class="timer">
+    <div class="rounded-xl border border-cursor-border-strong py-1.5 min-w-[70px] flex items-center justify-center flex-col gap-0 aspect-square px-1.5">
+      <h3 class="countdown-element font-manrope font-semibold text-2xl text-cursor-text text-center">{{ days() }}</h3>
+      <p class="text-sm font-inter capitalize font-normal text-cursor-text-muted text-center w-full">days</p>
+    </div>
+  </div>
+
+  <h3 class="font-manrope font-semibold text-2xl text-cursor-border-strong">:</h3>
+
+  <!-- Hours -->
+  <div class="timer">
+    <div class="rounded-xl border border-cursor-border-strong py-1.5 min-w-[70px] flex items-center justify-center flex-col gap-0 aspect-square px-1.5">
+      <h3 class="countdown-element font-manrope font-semibold text-2xl text-cursor-text text-center">{{ hours() }}</h3>
+      <p class="text-sm font-inter capitalize font-normal text-cursor-text-muted text-center w-full">hours</p>
+    </div>
+  </div>
+
+  <h3 class="font-manrope font-semibold text-2xl text-cursor-border-strong">:</h3>
+
+  <!-- Minutes -->
+  <div class="timer">
+    <div class="rounded-xl border border-cursor-border-strong py-1.5 min-w-[70px] flex items-center justify-center flex-col gap-0 aspect-square px-1.5">
+      <h3 class="countdown-element font-manrope font-semibold text-2xl text-cursor-text text-center">{{ minutes() }}</h3>
+      <p class="text-sm font-inter capitalize font-normal text-cursor-text-muted text-center w-full">minutes</p>
+    </div>
+  </div>
+
+  <h3 class="font-manrope font-semibold text-2xl text-cursor-border-strong">:</h3>
+
+  <!-- Seconds -->
+  <div class="timer">
+    <div class="rounded-xl border border-cursor-border-strong py-1.5 min-w-[70px] flex items-center justify-center flex-col gap-0 aspect-square px-1.5">
+      <h3 class="countdown-element font-manrope font-semibold text-2xl text-cursor-text text-center">{{ seconds() }}</h3>
+      <p class="text-sm font-inter capitalize font-normal text-cursor-text-muted text-center w-full">seconds</p>
+    </div>
+  </div>
+</div>

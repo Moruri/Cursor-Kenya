@@ -1,0 +1,42 @@
+<section class="pb-20 md:pt-10 md:pb-40">
+  <div class="container max-w-screen-sm md:max-w-screen-xl mx-auto px-10">
+    <div class="relative max-w-5xl mx-auto overflow-hidden rounded-xl border border-cursor-border-strong">
+      <img src="assets/images/community/cursor-kenya-group.jpg" alt="Cursor Kenya 2025 community group photo" class="w-full object-cover h-96 sm:h-120" />
+      <div aria-hidden="true" class="absolute inset-0 bg-cursor-text opacity-10 pointer-events-none"></div>
+
+      <!-- Play button overlay -->
+      <div class="absolute inset-0 size-full">
+        <div class="flex flex-col justify-center items-center size-full">
+          <button type="button" (click)="playVideo()" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-cursor-border-strong bg-cursor-bg text-cursor-text shadow-sm hover:bg-cursor-card cursor-pointer transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 size-4">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            Cursor Kenya 2025
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video modal overlay -->
+    @if (showVideo()) {
+      <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm" (click)="closeVideo()">
+        <div class="relative w-full max-w-3xl mx-4 aspect-video" (click)="$event.stopPropagation()">
+          <button type="button" (click)="closeVideo()" class="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-black/70 text-white hover:bg-black cursor-pointer transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6L6 18"></path>
+              <path d="M6 6L18 18"></path>
+            </svg>
+          </button>
+          <iframe
+            src="https://www.youtube.com/embed/CTi8RBGtL5Y?autoplay=1"
+            title="Cursor Kenya 2025"
+            class="w-full h-full rounded-xl"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    }
+  </div>
+</section>

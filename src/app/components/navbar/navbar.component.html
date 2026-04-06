@@ -1,0 +1,49 @@
+<header
+  class="sticky top-4 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full before:absolute before:inset-0 before:max-w-[85rem] before:mx-2 before:lg:mx-auto before:rounded-[26px] bg-none before:bg-cursor-bg/80 before:backdrop-blur-md">
+  <nav class="relative max-w-[85rem] w-full py-2.5 ps-5 pe-2 md:flex md:items-center md:justify-between md:py-1.5 mx-2 lg:mx-auto">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <a routerLink="/" aria-label="Cursor Kenya" class="flex-none rounded-md text-xl inline-block font-semibold focus:outline-none focus:opacity-80">
+        <div class="flex items-center gap-2">
+          <img src="assets/images/logos/cursor-logo.png" alt="Cursor Logo" class="w-8 h-8 rounded-md" />
+          <span class="text-cursor-text font-bold text-xl tracking-widest uppercase">Cursor</span>
+          <span class="text-cursor-text-muted font-medium text-sm">Kenya</span>
+        </div>
+      </a>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button type="button" (click)="toggleMenu()" class="size-8 flex justify-center items-center text-sm font-semibold rounded-full text-cursor-text" aria-label="Toggle navigation">
+          @if (!mobileMenuOpen()) {
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 12H20"></path>
+              <path d="M4 6H20"></path>
+              <path d="M4 18H20"></path>
+            </svg>
+          } @else {
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6L6 18"></path>
+              <path d="M6 6L18 18"></path>
+            </svg>
+          }
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <div
+      class="transition-all duration-300 overflow-hidden md:block"
+      [class.max-h-0]="!mobileMenuOpen()"
+      [class.max-h-96]="mobileMenuOpen()"
+      [class.opacity-0]="!mobileMenuOpen()"
+      [class.opacity-100]="mobileMenuOpen()"
+      [class.md:max-h-none]="true"
+      [class.md:opacity-100]="true">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-end gap-2 md:gap-3 py-2 md:py-0">
+        <a routerLink="/" (click)="closeMenu()" class="py-2 px-3 md:py-1.5 text-sm text-cursor-text hover:text-cursor-text-muted transition-colors rounded-lg">Home</a>
+        <a href="mailto:felixkent360@gmail.com?subject=Sponsorship%20Inquiry%20-%20Cursor%20Kenya" (click)="closeMenu()" class="py-2 px-3 md:py-1.5 text-sm text-cursor-text border border-cursor-border-strong rounded-full hover:bg-cursor-accent transition-colors">Sponsor Us</a>
+        <a href="https://luma.com/gwn67ctd" target="_blank" rel="noopener" (click)="closeMenu()" class="py-2 px-3 md:py-1.5 text-sm text-white bg-cursor-text rounded-full hover:opacity-90 transition-colors font-medium">Grab Tickets</a>
+      </div>
+    </div>
+  </nav>
+</header>
